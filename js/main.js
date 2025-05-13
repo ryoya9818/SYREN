@@ -64,7 +64,7 @@ function shuffle(array) {
       
           index = nextIndex;
           showSlide();
-        }, 3000);
+        }, 4000);
       }
       
   
