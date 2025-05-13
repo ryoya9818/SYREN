@@ -1,0 +1,149 @@
+/* 共通設定 */
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 2em;
+  }
+  
+  /* タイトル */
+  .site-title {
+    display: flex;
+    align-items: center; /* ← baselineじゃなく center にするのがポイント */
+    gap: 0.1em;
+    font-size: 2.5em;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #0ff;
+    margin-bottom: 0.5em;
+    line-height: 1;
+  }
+  
+  .title-icon {
+    width: 60px; /* ← 調整：文字サイズに近づける */
+    height: 60px;
+    margin-top: -14px;
+    object-fit: contain;
+    display: block;
+  }
+  
+  
+  
+  
+  
+  
+  /* サブタイトル（ジャンルごとのコピー） */
+  #genre-subtitle {
+    font-size: 1.2em;
+    color: #aaa;
+    margin-bottom: 1.5em;
+    text-shadow: 0 0 5px #0ff;
+  }
+  
+  /* スライドコンテナ */
+  #slide-container {
+    margin-top: 3em;
+    font-size: 1.2em;
+    color: #ccc;
+  }
+  
+  /* 画像ボックス */
+  .slide-box {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* スライド画像 */
+  .slide-img {
+    width: 90vw;
+    height: 60vh;
+    max-width: 1080px;
+    max-height: 720px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    background-color: #000;
+  }
+  
+  
+  
+  /* FANZAリンクボタン */
+  #fanza-link {
+    display: inline-block;
+    margin: 1em 0;
+    color: #66f8ff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1em;
+    text-shadow: 0 0 10px #66f8ff;
+  }
+
+  #fanza-link:hover {
+    background: rgba(0, 255, 255, 0.2);
+  }
+  
+  /* スライド操作ボタン */
+  .controls {
+    margin-top: 2em;
+  }
+  .controls button {
+    background: #111;
+    border: 1px solid #333;
+    color: #66f8ff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin: 0 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    text-shadow: 0 0 8px #66f8ff;
+  }
+  
+  .controls button:hover {
+    background: #222;
+  }
+  
+  /* トップページ用：ジャンル選択メニュー */
+  .genre-menu {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+  .genre-link {
+    position: relative;
+    background: rgba(0, 0, 0, 0.4);
+    color: #bdf;
+    text-decoration: none;
+    font-size: 1.6em;
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-shadow: 0 0 8px #8cf;
+    box-shadow: 0 0 12px rgba(136, 204, 255, 0.3);
+    transition: all 0.2s ease;
+    text-align: center;
+  }
+  .genre-link:hover {
+    background: rgba(136, 204, 255, 0.05);
+    box-shadow: 0 0 20px rgba(136, 204, 255, 0.5);
+    transform: scale(1.05);
+  }
+  
+  /* ホバーで出る日本語補足 */
+  .genre-link .jp-hover {
+    display: block;
+    font-size: 0.75em;
+    color: #888;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    margin-top: 5px;
+  }
+  .genre-link:hover .jp-hover {
+    opacity: 1;
+  }
+  
+  
+  
+  
