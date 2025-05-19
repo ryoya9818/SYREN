@@ -106,12 +106,15 @@ body {
   
   /* トップページ用：ジャンル選択メニュー */
   .genre-menu {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px 50px; /* ← 横と縦の間隔を少しだけ縮める */
+  max-width: 1000px;
+  width: 100%;
   }
+
+
   .genre-link {
     position: relative;
     background: rgba(0, 0, 0, 0.4);
@@ -132,18 +135,64 @@ body {
   }
   
   /* ホバーで出る日本語補足 */
-  .genre-link .jp-hover {
-    display: block;
-    font-size: 0.75em;
-    color: #888;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    margin-top: 5px;
+  @keyframes subtlePulse {
+  0%, 100% {
+    transform: scale(1.05);
   }
-  .genre-link:hover .jp-hover {
-    opacity: 1;
+  50% {
+    transform: scale(1.07);
   }
-  
-  
-  
-  
+}
+
+.genre-link {
+  position: relative;
+  display: inline-block;
+  background: radial-gradient(circle at center, #111a20 30%, #000 100%);
+  color: #cde;
+  text-decoration: none;
+  font-size: 1.6em;
+  padding: 20px 40px;
+  border-radius: 8px;
+
+  box-shadow:
+    0 0 8px rgba(102, 255, 255, 0.1),
+    0 0 12px rgba(102, 255, 255, 0.15),
+    inset 0 0 4px rgba(255, 255, 255, 0.05);
+  text-shadow: 0 0 4px #66f8ff;
+
+  animation: subtlePulse 3s ease-in-out infinite;
+  text-align: center;
+}
+.genre-link .jp-hover {
+  display: block;
+  font-size: 0.9em;
+  color: #ccc; /* ← 白より少し落とす */
+  opacity: 0.85; /* ← 薄すぎず自然な透け感 */
+  margin-top: 5px;
+  text-shadow: 0 0 1px #66f8ff; /* ← 発光も弱めに */
+}
+.genre-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;  /* ← ここで下に下げてる */
+  margin-bottom: 100px;
+  padding: 0 20px;
+}
+
+.genre-title {
+  font-size: 1.2em;
+  color: #ccc;
+  text-align: center;
+  margin-bottom: 50px; /* ← ちょい広め、自然で落ち着いた距離感 */
+  text-shadow: 0 0 3px #66f8ff;
+  letter-spacing: 1px;
+}
+
+
+
+
+
+
+
+
